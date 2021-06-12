@@ -1,0 +1,431 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+// ---------------------------------------------------------------------------------------
+// ----------------------------- Variables -----------------------------------------------
+// ---------------------------------------------------------------------------------------
+$shadow-color-dark : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+html{
+    scroll-behavior: smooth;
+  }
+.headings{
+    font-size: 50px;
+} 
+// SCROLL BAR
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(138, 138, 139, 0.842); 
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(132, 133, 134, 0.589);  
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(132, 133, 134, 0.8); 
+  } 
+// Preloader
+#loading{
+    width: 100%;
+    height: 100vh;
+    background: #fff url('../img/preloader.gif') no-repeat center;
+    position:fixed;
+    z-index: 2;
+}
+// MAIN HEADING UNDERLINE TEXT
+.underline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    p{
+        margin: 10px;
+        font-size: 20px;
+        color: grey;
+    }
+    .under{
+        
+        height: 5px;
+        width: 60px;
+        background-color: rgba(0, 0, 0, 0.74);
+    }
+}
+
+/* NAVBAR */
+.logo{
+    height: 100px;
+    width: 100px;
+}
+#hero{
+    height: 120vh;
+    background: url('../img/bgimg.jpg')  repeat fixed center center/cover;
+    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 0 100%, 0 0);
+    .overlay{
+        height: 120vh;
+        background-color: rgba(0, 0, 0, 0.356);
+        #hero-content{
+            margin-top: 8%;
+            margin-left: 10%;
+            @include dflex(center,flex-start,column);
+            .first-name, .last-name{
+                font-family: 'Odibee Sans', cursive;
+                color: white;
+                letter-spacing: 7px;
+                line-height: 8rem;
+            }
+            .first-name{
+                font-size: 9rem;
+            }
+            .last-name{
+                font-size: 11rem;
+            }
+            h6{
+                color: white;
+                font-size: 20px;
+                letter-spacing: 6px;
+                padding-top: 20px;
+            }
+        }
+
+        nav{
+           
+            .navbar-brand{
+                font-family: 'Condiment', cursive;
+                color: white;
+                font-size: 40px;
+            }
+            span{
+                    font-weight: 700;
+                }
+            position: relative;
+            padding: 20px;
+            ul{
+                li{ 
+                    list-style-type: none;
+                    a{  
+                        letter-spacing: 0.2rem;
+                        text-transform: uppercase;
+                        padding: 20px;
+                        text-decoration: none;
+                        font-size: 18px;
+                        color: white;
+                        float: left;
+                        display: block;
+                        border-bottom: 3px solid transparent;
+                        &:hover{
+                            transition: 0.3s;
+                            border-bottom: 3px solid white;
+                            color: rgba(252, 249, 249, 0.822);
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+   
+}
+// Services
+#stats{
+    height: 50vh;
+    
+.milestone {
+	margin-bottom: 30px;
+}
+
+.milestone h2 {
+	font-size: 60px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.milestone p {
+	margin-bottom: 0;
+}
+}
+/* HAMBURGER */
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 30px;
+    div{
+        width: 33px;
+        background-color:white;
+        height: 4px;
+        margin: 5px 5px; 
+    }
+  }
+  @media(max-width:850px){
+    nav{
+        @include dflex(center,center,column);
+        height: 100vh;
+        transition: all 0.3s ease-out;
+        a{
+            left: 5px;
+            position: absolute;
+            top: 0px;
+            height: auto;
+            width: 240px;
+        }
+        ul{
+            @include dflex(center,center,column);
+            li{
+                margin: auto;
+                a{
+                    font-size: 20px;
+                    margin: 20px;
+                }   
+            }
+        }
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav-resp{
+        height: 65px;
+    }
+    .v-class-resp{
+        opacity: 0;
+        display: none;
+    }
+    #hero-content{
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+  }
+// ABOUT SECTION
+#about{
+    height: 100vh;
+    .jumbotron{
+        padding: 50px 25px;
+        display: flex;
+        .about-image{
+            img{
+                height: 500px;
+                width: 500px;
+                box-shadow: $shadow-color-dark;
+            }
+        }
+        .about-content{
+            h3{
+                font-size: 45px
+            }
+            p{
+                font-size: 20px
+            }
+        }
+        .about-image,.about-content{
+            @include dflex(center,center,column);
+            width: 50%;
+            padding: 25px;
+        }
+
+    }
+}  
+// GALLERY SECTION
+
+#gallery{
+    background-color: whitesmoke;
+    padding:50px 0;
+    div{
+        img{
+            margin:2px;
+            position:static;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// Services
+#services{
+    padding-bottom: 50px;
+    height: auto;
+    div{
+        @include dflex(center,center,row);
+        flex-wrap: wrap;
+        div{
+            @include dflex(center,center,column);
+            padding-top: 50px;
+            width: 30%;
+            &:hover{
+                box-shadow: $shadow-color-dark;
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+            img{
+                box-shadow: $shadow-color-dark;
+            }
+            h3{
+                margin-top: 0.8rem;
+            }
+            p{
+                text-align: center;
+                width: 80%;
+            }
+        }
+    }
+    h2{
+        color: black;
+        text-align: center;
+    }
+   
+}
+
+// CONTACT SECTION
+#contact{
+    background: url('../img/contact-cover.jpg')  repeat fixed center center/cover;
+    height: 100vh;
+    .overlay{
+        padding-top: 50px;
+        height: 100vh;
+        background-color:rgba(0, 0, 0, 0.7);
+        .headings, p{
+            color: white;
+        }
+        .under{
+            background-color: white;
+        }
+    }
+    .contact-form-div{
+        width: auto;
+        padding: 25px 0;
+        @include dflex(center,center,column);
+        .input-field{
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            input{
+                height: 46px;
+            }
+            textarea, input{
+                // box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+                color: white;
+                border: 1px solid white;
+                background-color: transparent;
+                padding: 10px;
+                outline: none;
+            }
+            ::placeholder{
+                color: white;
+            }
+        }
+        .contact-button{
+            height: 46px;
+            width: 50%;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            &:hover{
+                transition: 0.3s;
+                transform: scale(1.08);
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+// FOOTER SECTION
+.heart{
+    color: rgb(209, 3, 3);
+}
+.main-footer{
+    padding-top: 25px;
+    @include dflex(center,center,column);
+    .footer-social{
+        .social-list{
+            display: flex;
+            list-style: none;
+            .social-icons{
+                transition: 0.3s;
+                color: rgba(0, 0, 0, 0.733);
+                font-size: 22px;
+                padding:15px;
+                border-radius: 45%;
+                &:hover{
+                   box-shadow: $shadow-color-dark;
+                }
+                .fa-facebook-f{
+                    &:hover{
+                    color: blue;
+                }
+                }
+                .fa-instagram{
+                    &:hover{
+                        color: red;
+                    }
+                }
+                .fa-snapchat-ghost{
+                    &:hover{
+                        color: yellow;
+                    }
+                }
+                .fa-twitter{
+                    &:hover{
+                        color: cornflowerblue;
+                    }
+                }
+            }
+        }
+    }
+}
+.sam{
+    color: black;
+    text-decoration: none;
+    &:hover{
+        transition: 0.3s;
+        color: rgba(0, 0, 0, 0.616);
+    }
+}
+
+/* Media Query for Gallery */
+@media(max-width:880px){
+    .gallery {
+        div {
+            img{
+                width:200px;
+                }
+         }
+    }
+}
+@media(max-width:455px){
+    .gallery{
+        div{
+            img{
+                width:175px;
+            }
+        }
+    }
+}
+@media(max-width:376px){
+    .gallery{
+        div{
+            img{
+                width:130px;
+            }
+        }
+    }
+}
+
+
+// Other Media
+@media(max-width:930px){
+
+}

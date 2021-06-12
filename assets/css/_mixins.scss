@@ -1,0 +1,12 @@
+@mixin dflex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin bgimg($url) {
+    background-image:$url;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

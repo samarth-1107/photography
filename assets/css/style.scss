@@ -208,7 +208,7 @@ html{
 #gallery{
     background-color: whitesmoke;
     padding:50px 0;
-    div{
+    .gallery-images{
         img{
             margin:2px;
             position:static;
@@ -367,8 +367,8 @@ html{
 
 /* Media Query for Gallery */
 @media(max-width:880px){
-    .gallery {
-        div {
+    #gallery {
+        .gallery-images{
             img{
                 width:200px;
                 }
@@ -376,8 +376,8 @@ html{
     }
 }
 @media(max-width:455px){
-    .gallery{
-        div{
+    #gallery{
+        .gallery-images{
             img{
                 width:175px;
             }
@@ -385,8 +385,8 @@ html{
     }
 }
 @media(max-width:376px){
-    .gallery{
-        div{
+    #gallery{
+        .gallery-images{
             img{
                 width:130px;
             }
@@ -413,6 +413,13 @@ html{
                 p{
                     font-size: 15px;
                 }
+            }
+        }
+    }
+    #services{
+        div{
+            div{
+                width: 50%;
             }
         }
     }
@@ -506,7 +513,17 @@ html{
                 }
             }
         }
+    }
+    #services{
+        div{
+            div{
+                p{
+                    width: 95%;
+                }
+            }
         }
+    }
+
     }
 
 @media(max-width:565px){
@@ -525,6 +542,16 @@ html{
             }
         }
     }
+    #services{
+        div{
+            div{
+                width: 100%;
+                p{
+                    width: 85%;
+                }
+            }
+        }
+    }
     #contact{
         .contact-form-div{
             .input-field{
@@ -536,5 +563,48 @@ html{
     }
     
 }
-@media(max-width:465px){
+@media(max-width:480px){
+    #hero{
+        .overlay{
+            nav{
+                ul{
+                    li{
+                        a{  
+                            margin-top: 10px;
+                            padding: 9px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            #hero-content{
+                margin-top: 40%;
+                .first-name,.last-name{
+                    line-height: 5rem;
+                    letter-spacing: 3px;
+                }
+                .first-name{
+                    font-size: 6rem;
+                }
+                .last-name{
+                    font-size: 7rem;
+                }
+                h6{
+                    letter-spacing: 2px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    #about{
+        .jumbotron{
+            .about-image{
+                img{
+                    height: 300px;
+                    width: 300px;
+                }
+              
+            }
+        }
+    }
 }

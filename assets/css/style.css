@@ -249,12 +249,12 @@ html {
   padding: 50px 0;
 }
 
-#gallery div img {
+#gallery .gallery-images img {
   margin: 2px;
   position: static;
 }
 
-#gallery div img:hover {
+#gallery .gallery-images img:hover {
   opacity: 0.8;
 }
 
@@ -497,19 +497,19 @@ html {
 
 /* Media Query for Gallery */
 @media (max-width: 880px) {
-  .gallery div img {
+  #gallery .gallery-images img {
     width: 200px;
   }
 }
 
 @media (max-width: 455px) {
-  .gallery div img {
+  #gallery .gallery-images img {
     width: 175px;
   }
 }
 
 @media (max-width: 376px) {
-  .gallery div img {
+  #gallery .gallery-images img {
     width: 130px;
   }
 }
@@ -524,6 +524,9 @@ html {
   }
   #about .jumbotron .about-content p {
     font-size: 15px;
+  }
+  #services div div {
+    width: 50%;
   }
 }
 
@@ -595,6 +598,9 @@ html {
   #about .jumbotron .about-content p {
     font-size: 15px;
   }
+  #services div div p {
+    width: 95%;
+  }
 }
 
 @media (max-width: 565px) {
@@ -605,8 +611,43 @@ html {
     padding: 10px;
     font-size: 15px;
   }
+  #services div div {
+    width: 100%;
+  }
+  #services div div p {
+    width: 85%;
+  }
   #contact .contact-form-div .input-field textarea {
     width: 22rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero .overlay nav ul li a {
+    margin-top: 10px;
+    padding: 9px;
+    font-size: 10px;
+  }
+  #hero .overlay #hero-content {
+    margin-top: 40%;
+  }
+  #hero .overlay #hero-content .first-name, #hero .overlay #hero-content .last-name {
+    line-height: 5rem;
+    letter-spacing: 3px;
+  }
+  #hero .overlay #hero-content .first-name {
+    font-size: 6rem;
+  }
+  #hero .overlay #hero-content .last-name {
+    font-size: 7rem;
+  }
+  #hero .overlay #hero-content h6 {
+    letter-spacing: 2px;
+    font-size: 15px;
+  }
+  #about .jumbotron .about-image img {
+    height: 300px;
+    width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */

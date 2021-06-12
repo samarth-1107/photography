@@ -200,72 +200,8 @@ html {
   margin: 5px 5px;
 }
 
-@media (max-width: 850px) {
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100vh;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-  }
-  nav a {
-    left: 5px;
-    position: absolute;
-    top: 0px;
-    height: auto;
-    width: 240px;
-  }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  nav ul li {
-    margin: auto;
-  }
-  nav ul li a {
-    font-size: 20px;
-    margin: 20px;
-  }
-  .burger {
-    display: block;
-  }
-  .h-nav-resp {
-    height: 65px;
-  }
-  .v-class-resp {
-    opacity: 0;
-    display: none;
-  }
-  #hero-content {
-    margin-top: 20%;
-    margin-left: 5%;
-  }
-}
-
 #about {
-  height: 100vh;
+  height: auto;
 }
 
 #about .jumbotron {
@@ -294,9 +230,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -443,12 +379,18 @@ html {
   height: 46px;
 }
 
+#contact .contact-form-div .input-field textarea {
+  height: 10rem;
+  width: 30rem;
+}
+
 #contact .contact-form-div .input-field textarea, #contact .contact-form-div .input-field input {
   color: white;
   border: 1px solid white;
   background-color: transparent;
   padding: 10px;
   outline: none;
+  resize: none;
 }
 
 #contact .contact-form-div .input-field ::-webkit-input-placeholder {
@@ -569,6 +511,102 @@ html {
 @media (max-width: 376px) {
   .gallery div img {
     width: 130px;
+  }
+}
+
+@media (max-width: 1065px) {
+  #about .jumbotron .about-image img {
+    height: 400px;
+    width: 400px;
+  }
+  #about .jumbotron .about-content h3 {
+    font-size: 35px;
+  }
+  #about .jumbotron .about-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #hero .overlay #hero-content .first-name {
+    font-size: 8rem;
+  }
+  #hero .overlay #hero-content .last-name {
+    font-size: 10rem;
+  }
+  #about .jumbotron .about-image img {
+    height: 300px;
+    width: 300px;
+  }
+  #about .jumbotron .about-content h3 {
+    font-size: 25px;
+  }
+  #about .jumbotron .about-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 660px) {
+  #hero .overlay #hero-content {
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+  #hero .overlay #hero-content .first-name {
+    font-size: 7rem;
+  }
+  #hero .overlay #hero-content .last-name {
+    font-size: 9rem;
+  }
+  #hero .overlay #hero-content h6 {
+    font-size: 14px;
+  }
+  #hero .overlay nav {
+    padding: 0px;
+  }
+  #hero .overlay nav ul li a {
+    padding: 15px;
+    font-size: 15px;
+  }
+  #about .jumbotron {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .jumbotron .about-content, #about .jumbotron .about-image {
+    width: 100%;
+  }
+  #about .jumbotron .about-image img {
+    height: 400px;
+    width: 400px;
+  }
+  #about .jumbotron .about-content h3 {
+    font-size: 35px;
+  }
+  #about .jumbotron .about-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 565px) {
+  #hero .overlay nav {
+    padding: 0px;
+  }
+  #hero .overlay nav ul li a {
+    padding: 10px;
+    font-size: 15px;
+  }
+  #contact .contact-form-div .input-field textarea {
+    width: 22rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

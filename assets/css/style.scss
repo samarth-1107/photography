@@ -171,47 +171,10 @@ html{
         margin: 5px 5px; 
     }
   }
-  @media(max-width:850px){
-    nav{
-        @include dflex(center,center,column);
-        height: 100vh;
-        transition: all 0.3s ease-out;
-        a{
-            left: 5px;
-            position: absolute;
-            top: 0px;
-            height: auto;
-            width: 240px;
-        }
-        ul{
-            @include dflex(center,center,column);
-            li{
-                margin: auto;
-                a{
-                    font-size: 20px;
-                    margin: 20px;
-                }   
-            }
-        }
-    }
-    .burger{
-        display: block;
-    }
-    .h-nav-resp{
-        height: 65px;
-    }
-    .v-class-resp{
-        opacity: 0;
-        display: none;
-    }
-    #hero-content{
-        margin-top: 20%;
-        margin-left: 5%;
-    }
-  }
+
 // ABOUT SECTION
 #about{
-    height: 100vh;
+    height: auto;
     .jumbotron{
         padding: 50px 25px;
         display: flex;
@@ -231,10 +194,12 @@ html{
             }
         }
         .about-image,.about-content{
-            @include dflex(center,center,column);
+            @include dflex(flex-start,center,column);
             width: 50%;
             padding: 25px;
+            
         }
+        
 
     }
 }  
@@ -315,6 +280,10 @@ html{
             input{
                 height: 46px;
             }
+            textarea{
+                height: 10rem;
+                width: 30rem;
+            }
             textarea, input{
                 // box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
                 color: white;
@@ -322,6 +291,7 @@ html{
                 background-color: transparent;
                 padding: 10px;
                 outline: none;
+                resize: none;
             }
             ::placeholder{
                 color: white;
@@ -426,6 +396,145 @@ html{
 
 
 // Other Media
-@media(max-width:930px){
+@media(max-width:1065px){
+    #about{
+        .jumbotron{
+            .about-image{
+                img{
+                    height: 400px;
+                    width: 400px;
+                }
+              
+            }
+            .about-content{
+                h3{
+                    font-size: 35px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:850px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #hero{
+        .overlay{
+            #hero-content{
+                .first-name{
+                    font-size: 8rem;
+                }
+                .last-name{
+                    font-size: 10rem;
+                }
+            }
+        }
+    }
+    #about{
+        .jumbotron{
+            .about-image{
+                img{
+                    height: 300px;
+                    width: 300px;
+                }
+              
+            }
+            .about-content{
+                h3{
+                    font-size: 25px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:660px){
+    #hero{
+        .overlay{
+            #hero-content{
+                margin-top: 20%;
+                margin-left: 5%;
+                .first-name{
+                    font-size: 7rem;
+                }
+                .last-name{
+                    font-size: 9rem;
+                }
+                h6{
+                    font-size: 14px;
+                }
+            }
+            nav{
+                padding: 0px;
+                ul{
+                    li{
+                        a{
+                            padding: 15px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #about{
+        .jumbotron{
+            flex-direction: column;
+            .about-content,.about-image{
+                width: 100%;
+            }
+            .about-image{
+                img{
+                    height: 400px;
+                    width: 400px;
+                }
+              
+            }
+            .about-content{
+                h3{
+                    font-size: 35px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+        }
+    }
 
+@media(max-width:565px){
+    #hero{
+        .overlay{
+            nav{
+                padding: 0px;
+                ul{
+                    li{
+                        a{
+                            padding: 10px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #contact{
+        .contact-form-div{
+            .input-field{
+                textarea{
+                    width: 22rem;
+                }
+            }
+        }
+    }
+    
+}
+@media(max-width:465px){
 }

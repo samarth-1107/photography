@@ -571,7 +571,7 @@ html{
                     li{
                         a{  
                             margin-top: 10px;
-                            padding: 9px;
+                            padding: 8px;
                             font-size: 10px;
                         }
                     }
@@ -606,5 +606,60 @@ html{
               
             }
         }
+    }
+}
+@media(max-width:360px) {
+    #hero{
+        .overlay{ 
+            nav{
+                .navbar-brand{
+                    .logo{
+                        height: 85px;
+                        width: 85px;
+                    }
+                }
+                ul{
+                    li{
+                        a{
+                            letter-spacing: 1px;
+                            padding: 5px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            #hero-content{
+                h6{
+                    letter-spacing: 2px;
+                    font-size: 13px;
+                }
+                
+            .first-name{
+                font-size: 5rem;
+            }
+             .last-name{
+            font-size: 6rem;
+             }
+            }
+        }
+    }
+    #about {
+        .jumbotron{
+            padding: 0px;
+            .about-content{
+                 h3 {
+                font-size: 30px;
+                }
+            }
+         }
+    } 
+    #contact{
+         .contact-form-div {
+            .input-field{
+                 textarea {
+                    width: 18rem;
+                }
+            }
+         }
     }
 }

@@ -625,7 +625,7 @@ html {
 @media (max-width: 480px) {
   #hero .overlay nav ul li a {
     margin-top: 10px;
-    padding: 9px;
+    padding: 8px;
     font-size: 10px;
   }
   #hero .overlay #hero-content {
@@ -648,6 +648,37 @@ html {
   #about .jumbotron .about-image img {
     height: 300px;
     width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  #hero .overlay nav .navbar-brand .logo {
+    height: 85px;
+    width: 85px;
+  }
+  #hero .overlay nav ul li a {
+    letter-spacing: 1px;
+    padding: 5px;
+    font-size: 13px;
+  }
+  #hero .overlay #hero-content h6 {
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+  #hero .overlay #hero-content .first-name {
+    font-size: 5rem;
+  }
+  #hero .overlay #hero-content .last-name {
+    font-size: 6rem;
+  }
+  #about .jumbotron {
+    padding: 0px;
+  }
+  #about .jumbotron .about-content h3 {
+    font-size: 30px;
+  }
+  #contact .contact-form-div .input-field textarea {
+    width: 18rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
